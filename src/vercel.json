@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "Index.html", "use": "@vercel/static" },
+    { "src": "about me.html", "use": "@vercel/static" },
+    { "src": "Resumen.html", "use": "@vercel/static" },
+    { "src": "css/**", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" }
+  ],
+  "cleanUrls": true,
+  "routes": [
+    { "src": "/", "dest": "/Index.html" },
+    { "src": "/about", "dest": "/about me.html" },
+    { "src": "/resumen", "dest": "/Resumen.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
